@@ -7,11 +7,7 @@ var PlayerView = Backbone.View.extend({
 
   initialize: function() {
     this.$el.on('ended', function(){
-      console.log("song ended");
-      // remove from songQueue collection
-      this.model.dequeue();
-      // remove from view (re-render)
-      // start next song in queue
+      this.model.ended();
     }.bind(this));
   },
 

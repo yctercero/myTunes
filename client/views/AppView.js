@@ -14,11 +14,17 @@ var AppView = Backbone.View.extend({
   },
 
   render: function(){
-    return this.$el.html([
-      this.playerView.$el,
-      this.libraryView.$el,
-      this.songQueueView.$el
-    ]);
+    $('main').height(window.innerHeight);
+    $('aside').height(window.innerHeight);
+    $('aside').append(this.songQueueView.$el);
+    $('#player').append(this.playerView.$el);
+    $('main section').append('<h2>Library</h2>');
+    $('main section').append(this.libraryView.$el);
+    // return this.$el.html([
+    //   this.playerView.$el,
+    //   this.libraryView.$el,
+    //   this.songQueueView.$el
+    // ]);
   }
 
 });
