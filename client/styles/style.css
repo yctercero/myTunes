@@ -103,7 +103,7 @@ main ul > li:hover{
   float: left;
 }
 
-.fa-plus-circle, .fa-play{
+.fa-plus-circle, .fa-play, .fa-pause{
   color: white;
   vertical-align: middle;
   padding: 10px 18px;
@@ -115,6 +115,10 @@ main ul > li:hover{
 
 .indSong > span {
   float: right;
+}
+
+.fa-heart, .fa-heart-o {
+  padding: 0 10px;
 }
 
 

@@ -8,6 +8,12 @@ var LibraryView = Backbone.View.extend({
     this.collection.on('upCount', function(){
       this.render();
     }, this);
+    this.collection.on('favorited', function(){
+      this.render();
+    }, this);
+    this.collection.on('beingPlayed', function(){
+      this.render();
+    }, this);
   },
 
   render: function(){

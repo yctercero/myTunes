@@ -7,6 +7,14 @@ var Songs = Backbone.Collection.extend({
     this.on('change:playCount', function(){
       this.trigger('upCount');
     }, this);
+
+    this.on('change:favorited', function(){
+      this.trigger('favorited');
+    }, this);
+
+    this.on('change:beingPlayed', function(){
+      this.trigger('beingPlayed');
+    }, this);
   }
 
 });

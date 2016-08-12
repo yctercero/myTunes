@@ -12,7 +12,9 @@ var AppView = Backbone.View.extend({
       this.playerView.setSong(model.get('currentSong'));
     }, this);
 
-    // this.model.on('upCount', this.render, this);
+    this.model.get('currentSong').on('change:beingPlayed', function(model){
+      console.log("I was paused");
+    });
   },
 
   render: function(){
