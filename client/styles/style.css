@@ -112,3 +112,10 @@ main ul > li:hover{
 .fa-plus-circle:hover{
   color: #7A1631;
 }
+
+.indSong > span {
+  float: right;
+}
+
+
+

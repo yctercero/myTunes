@@ -18,7 +18,6 @@ var SongQueue = Songs.extend({
   },
 
   dequeue: function(song){
-
     if(this.at(0) === song){
       this.playNext();
     }else{
@@ -35,9 +34,4 @@ var SongQueue = Songs.extend({
       this.trigger('stop');
     }
   }
-
-  // ended: function(){
-  //   this.playNext();
-  // }
-
 });

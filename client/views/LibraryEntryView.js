@@ -5,11 +5,10 @@ var LibraryEntryView = Backbone.View.extend({
 
   collectionStatus: false,
 
-  template: _.template('<div class="clearfix indSong"><i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-plus-circle" aria-hidden="true"></i><div class="songBod"><h4><%= title %></h4><h5><%= artist %></h5></div></div>'),
+  template: _.template('<div class="clearfix indSong"><i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-plus-circle" aria-hidden="true"></i><div class="songBod"><h4><%= title %></h4><h5><%= artist %></h5></div><span><%= playCount %></span></div>'),
 
   events: {
     'click': function() {
-      // this.model.play();
       this.model.enqueue();
     }
   },
