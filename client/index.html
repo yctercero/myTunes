@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="styles/style.css">
+        <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    </head>
+  <body>
+    <div class="wrapper clearfix">
+        <aside>
+            <h2><i class="fa fa-server" aria-hidden="true"></i> Song Queue</h2>
+        </aside>
+        <main>
+            <div>
+                <h1>My<span>Tunes</span></h1>
+            </div>
+            <div id="player"></div>
+            <section>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Scripts may be placed anywhere on a page. But FYI, they block rendering of elements
+     below them until after the scripts load-->
+    <script src="https://use.fontawesome.com/1e7ad219dc.js"></script>
+
+    <script src="bower_components/jquery/jquery.min.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/backbone/backbone.js"></script>
+
+    <script src="data/data.js"></script>
+
+    <script src="general.js"></script>
+
+    <script src="models/SongModel.js"></script>
+    <script src="collections/Songs.js"></script>
+    <script src="collections/SongQueue.js"></script>
+    <script src="models/AppModel.js"></script>
+
+    <script src="views/PlayerView.js"></script>
+    <script src="views/LibraryView.js"></script>
+    <script src="views/LibraryEntryView.js"></script>
+    <script src="views/AppView.js"></script>
+    <script src="views/SongQueueEntryView.js"></script>
+    <script src="views/SongQueueView.js"></script>
+
+    <script>
+      $(function(){
+        // set up model objects
+        var library = new Songs(songData);
+        var app = new AppModel({library: library});
+
+        // build a view for the top level of the whole app
+        var appView = new AppView({model: app});
+
+        // put the view onto the screen
+        $('body').append(appView.render());
+      });
+    </script>
+  </body>
+</html>

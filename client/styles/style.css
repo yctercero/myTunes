@@ -1,0 +1,125 @@
+*{
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+body{
+  color: #dfe0e6;
+  font-family: 'Lato', sans-serif;
+}
+
+ul, ol{
+  list-style-type: none;
+}
+
+.clearfix::after{
+  display: block;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+h1{
+  font-size: 28px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: lighter;
+}
+
+h1 span{
+  font-weight: 600;
+}
+
+audio{
+  width: 100%;
+}
+
+aside, main{
+  float: left;
+}
+
+aside{
+  width: 25%;
+  background-color: #1c1c1f;
+  padding: 20px 30px;
+}
+
+h4{
+  padding-bottom: 3px;
+  font-weight: 300;
+}
+
+h5{
+  font-weight: lighter;
+}
+
+h2{
+  font-size: 28px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+aside li{
+  font-weight: lighter;
+  padding: 10px;
+  background-color: rgb(122, 122, 167);
+  border-radius: 8px;
+  margin: 10px 0 15px;
+}
+
+main{
+  width: 75%;
+  background-color: #121314;
+}
+
+main h2{
+  text-align: left;
+}
+
+main > section{
+  padding: 20px 50px;
+}
+
+main > div:first-of-type{
+  background-color: #648f00;
+  padding: 10px 0;
+}
+
+main ul > li{
+  border-bottom: 1px solid #ccc;
+  color: #dfe0e6;
+  padding: 12px 5px;
+  font-weight: lighter;
+  font-size: 16px;
+}
+
+main ul > li:hover{
+  background-color: #1c1c1f;
+}
+
+.indSong > div, .indSong i{
+  float: left;
+}
+
+.fa-plus-circle, .fa-play, .fa-pause{
+  color: white;
+  vertical-align: middle;
+  padding: 10px 18px;
+}
+
+.fa-plus-circle:hover{
+  color: #7A1631;
+}
+
+.indSong > span {
+  float: right;
+}
+
+.fa-heart, .fa-heart-o {
+  padding: 0 10px;
+}
+
+
+
