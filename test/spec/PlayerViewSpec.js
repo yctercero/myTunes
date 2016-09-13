@@ -20,8 +20,7 @@ describe('PlayerView', function() {
         artist: "Aaliyah"
       },
     ]);
-    // playerView is created in AppView initialize
-    // access with appView.playerView
+
     appView = new AppView({model: new AppModel({library: library})});
   });
 
